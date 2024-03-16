@@ -5,9 +5,28 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
+    public static ShopManager Instance { get; private set; }
+
     [SerializeField] private TMP_Text coinText;
     private int currentCoins;
+    private int currentPots = 0;
+    public int CurrentCoins => currentCoins;
+    public int CurrentPots => currentPots;
     [SerializeField] private int startCoins;
+
+    private void Awake()
+    {
+        // If there is an instance, and it's not me, delete myself.
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {
@@ -29,8 +48,20 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    public void BuyPot()
+    {
+        currentPots++;
+    }
+
+    public void AddCoins(int price)
+    {
+        currentCoins += price;
+        GameEvents.Instance.BuyItem.Invoke();
+        UpdateCoinText();
+    }
+
     private void UpdateCoinText()
     {
-        coinText.text = "Coins: " + currentCoins;
+        coinText.text = currentCoins.ToString();
     }
 }

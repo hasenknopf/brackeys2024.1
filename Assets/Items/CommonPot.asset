@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb9ef7d7fc50594d96c6d726230797a, type: 3}
   m_Name: CommonPot
   m_EditorClassIdentifier: 
-  itemName: Plant Pot
+  itemName: Common Plant Pot
   itemPrice: 5
-  maxPots: 20
+  maxPots: 14
   potSprite: {fileID: 21300000, guid: 162b9325ed31ebb4094b2819edf25b55, type: 3}
-  potPrefab: {fileID: 0}
