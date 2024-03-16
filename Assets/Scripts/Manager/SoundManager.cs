@@ -43,6 +43,16 @@ public class SoundManager : MonoBehaviour
         musicSlider.maxValue = maxMusicVolume;
         soundSlider.maxValue = maxSoundVolume;
 
+        if(PlayerPrefs.GetFloat("MusicVolume") == 0f)
+        {
+            PlayerPrefs.SetFloat("MusicVolume", maxMusicVolume / 2);
+        }
+
+        if (PlayerPrefs.GetFloat("SoundVolume") == 0f)
+        {
+            PlayerPrefs.SetFloat("SoundVolume", maxSoundVolume / 2);
+        }
+
         musicSlider.value = PlayerPrefs.GetFloat("MusicVolume");
         soundSlider.value = PlayerPrefs.GetFloat("SoundVolume");
 
