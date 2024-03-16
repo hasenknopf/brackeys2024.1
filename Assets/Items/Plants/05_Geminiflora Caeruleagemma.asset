@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db114f70b76a9f445bf7f8ba85be2cf9, type: 3}
+  m_Name: 05_Geminiflora Caeruleagemma
+  m_EditorClassIdentifier: 
+  itemName: Geminiflora Caeruleagemma
+  itemPrice: 30
+  unlockCoins: 150
+  seedSprite: {fileID: 21300000, guid: 676601962141152468621c43ab41fb15, type: 3}
+  grownSprite: {fileID: 21300000, guid: 935551938f5aa2e41a3a5ea715ac4b6f, type: 3}
+  animatorController: {fileID: 0}
+  daysToGrow: 3
+  grownPrice: 40
+  seedPrice: 22
+  dryPrice: 1

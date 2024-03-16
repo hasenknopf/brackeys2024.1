@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class Plant : MonoBehaviour
@@ -47,18 +46,21 @@ public class Plant : MonoBehaviour
                 {
                     plantPot.isPotEmpty = false;
                     plantPot.PlantSeed(plant);
-                    Debug.Log(plant.itemName + " bought for " + plant.itemPrice + " Coins.");
+                    GameEvents.Instance.BuyItem.Invoke();
+
                     Destroy(gameObject);
                 }
                 else
                 {
-                    Debug.Log("Transaction failed");
+                    GameEvents.Instance.Error.Invoke();
+
                     Destroy(gameObject);
                 }
             }
             else
             {
-                Debug.Log("Placement failed");
+                GameEvents.Instance.Error.Invoke();
+
                 Destroy(gameObject);
             }
         }
