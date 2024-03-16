@@ -64,11 +64,11 @@ public class Pot : MonoBehaviour
     {
         PlacePot();
         DragMovement();
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            //Watering
-            isWatered = true;
-        }
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    //Watering
+        //    isWatered = true;
+        //}
     }
 
     public void CheckForGrowing()
